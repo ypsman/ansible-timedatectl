@@ -1,9 +1,10 @@
 ---
+dist: stretch
 language: python
 python: "2.7"
 
 # Use the new container infrastructure
-sudo: false
+sudo: true
 
 # Install ansible
 addons:
@@ -21,9 +22,13 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
+  # Install Role from Ansible Galaxy
+  - ansible-galaxy install ypsman.timedatectl
+
+
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
-  - ansible-galaxy install ypsman.timedatectl
+
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
