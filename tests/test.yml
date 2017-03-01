@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - ypsman.ansible-timedatectl
+    - ypsman.timedatectl
