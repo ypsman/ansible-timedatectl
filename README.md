@@ -3,6 +3,7 @@ ansible timedatectl
 [![Build Status](https://travis-ci.org/ypsman/ansible-timedatectl.svg?branch=master)](https://travis-ci.org/ypsman/ansible-timedatectl)
 
 Setting up Systemd timedatectl NTP config.
+Tested for Ubuntu 18.04 and Debian 9.
 
 Example Playbook
 ----------------

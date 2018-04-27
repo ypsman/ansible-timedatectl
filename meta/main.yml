@@ -2,11 +2,13 @@ galaxy_info:
   author: ypsman
   description: Setup systemd TimeDatectl and Timezone config
   license: license (GPLv2, CC-BY, etc)
-  min_ansible_version: 1.2
+  min_ansible_version: 2.2
   platforms:
   - name: Debian
     versions:
     - stretch
+  - name: Ubuntu
+    versions: bionic
   galaxy_tags:
   - ntp
   - timedatectl
@@ -14,4 +16,5 @@ galaxy_info:
   - timezone
   - systemd
   - debian
+  - ubuntu
 dependencies: []

@@ -1,13 +1,10 @@
 ---
 # tasks file for ansible-timedatectl
-- copy:
-    content: |
-            {{ timedatectl_timezone }}
-    dest: /etc/timezone
-  notify: run tzdata-config
-
 - name: Setup timesync config
   template:
     src: timesyncd.conf.template
     dest: /etc/systemd/timesyncd.conf
   notify: run Timedatectl
+
+- name: set Timezone
+  timezone: name={{ timedatectl_timezone }}
