@@ -4,6 +4,7 @@ ansible timedatectl
 
 Setting up Systemd timedatectl NTP config.
 Tested on Ubuntu 16.04/18.04, Debian 8/9 and Centos7.
+Role is skipped if systemd is not used on the Systen.
 
 Example Playbook
 ----------------
