@@ -7,9 +7,13 @@ galaxy_info:
   - name: Debian
     versions:
     - stretch
+    - jessie
   - name: Ubuntu
-    versions: 
+    versions:
     - bionic
+    - xenial
+  - name: EL
+    versions: [7]
   galaxy_tags:
   - ntp
   - timedatectl
@@ -18,4 +22,8 @@ galaxy_info:
   - systemd
   - debian
   - ubuntu
+  - centos
+  - rhel
+  - redhat
+  - oracle
 dependencies: []
